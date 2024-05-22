@@ -1,0 +1,353 @@
+.tomarPantalla {
+	position: absolute;
+	background: nth($paleta, 4);
+    @include tamano(100%, 100%);
+    @include flex(none, center, center, row);
+}
+#cookies {
+	background: nth($paleta, 4);
+    @include tamano(200px, 100%);
+    @include flex(flex, center, center, column);
+	position: absolute;
+	bottom: 50%;
+	p {
+        @include tamano(100px, 50%);
+        @include flex(flex, center, center, row);
+		background: nth($paleta, 5);
+		font-size: 2em;
+		text-align: center;
+		text-transform: capitalize;
+	}
+	div {
+		background: nth($paleta, 5);
+        @include tamano(100px, 50%);
+        @include flex(flex, center, space-around, row);
+			button {
+				background: nth($paleta, 4);
+                @include tamano(50px, 150px);
+                @include flex(flex, center, space-around, row);
+                text-transform: capitalize;
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+	}
+#time {
+	margin-bottom: 10px;
+    @include tamano(50px, 100%);
+    @include flex(flex, center, center, row);
+	font-size: 1em;
+	background: nth($paleta, 4);
+	color: whitesmoke;
+	letter-spacing: 3px;
+	p {
+		background: nth($paleta, 1);
+        @include tamano(100%, 50%);
+        @include flex(flex, center, start, row);
+		padding-left: 30px;
+
+	}:nth-child(2n){
+            @include flex(flex, center, center, row);
+        }
+}
+.comp {
+    @include tamano(90%, 100%);
+    @include flex(none, center, center, row);
+	position: absolute;
+	top: 0;
+	margin: 0 auto;
+}
+.divClose {
+    @include tamano(10%, 100%);
+    @include flex(flex, center, end, row);
+
+}
+#close {
+	margin-right: 1%;
+    @include tamano(50px, 50px);
+	font-size: 1em;
+}
+#pago {
+	background: nth($paleta, 3);
+    @include tamano(95%, 90%);
+    @include flex(flex, center, center, column);
+
+	color: whitesmoke;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	p {
+		padding-left: 30px;
+		padding-right: 30px;
+		text-align: center;
+		font-size: 3em;
+		text-transform: capitalize;
+        @include tamano(200px, 50%);
+        @include flex(flex, center, center, row);
+	}
+	img {
+        @include tamano(300px, 250px);
+	}
+}
+
+#contenedor {
+    @include tamano(750px, 100%);
+    @include flex(flex, center, center, row);
+}
+.generacionPedido {
+    @include tamano(95%,50%);
+    @include flex(flex, center, center, column);
+}
+#botones {
+    border-radius: 10px 10px 0px 0px ;
+	background: nth($paleta, 1);
+	margin: 0 auto;
+    @include tamano(15%, 90%);
+    @include flex(flex, center, space-around, row);
+	button {
+		margin: 30px;
+        @include tamano(65%, 25%);
+	}
+}
+#gustos {
+	border-radius: 0px 0px 10px 10px;
+	margin: 0 auto;
+	background: nth($paleta, 4);
+    @include tamano(100%, 90%);
+    @include flex(flex, center, start, column);
+	li {
+        text-shadow: 1px 1px 1px #000000;
+        border-radius: 10px;
+		margin: 0 auto;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+        @include tamano(10%, 90%);
+        @include flex(flex, center, space-around, row);
+		text-transform: capitalize;
+		&:nth-child(2n-1) {
+			background: nth($paleta, 2);
+		}
+		&:nth-child(2n) {
+			background: nth($paleta, 3);
+		}
+		h4 {
+            @include tamano(100%, 80%);
+            @include flex(flex, center, start, row);
+			text-transform: capitalize;
+			&::before {
+				content: " - ";
+			}
+		}
+		p {
+            @include tamano(100%, 10%);
+            @include flex(flex, center, center, row);
+			text-transform: capitalize;
+		}
+		button {
+            @include tamano(50%, 5%);
+			font-size: 1em;
+			text-transform: capitalize;
+			border-radius: 5px;
+			box-shadow: 0px 0px 0px 0px;
+			&:hover {
+				transition: 0.25s ease-in-out;
+				transform: translateX(0);
+			}
+		}
+	}
+}
+.continuar {
+    @include flex(flex, center, start, column);
+    @include tamano(95%, 50%);
+}
+.botoneraytotal {
+	border-radius: 0px 0px 10px 10px;
+    @include tamano(25%, 90%);
+    @include flex(flex, center, start, column);
+	background: nth($paleta, 1);
+}
+#next {
+    @include tamano(40%, 20%);
+	margin: 0 auto;
+	font-size: 1em;
+	text-transform: capitalize;
+}
+#total {
+	margin: 0 auto;
+    letter-spacing: 3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 2em;
+    @include tamano(50%, auto);
+}
+.tittle{
+    border-radius: 10px 10px 0px 0px ;
+    background: nth($paleta, 1);
+    @include tamano(20%, 90%);
+    @include flex(flex, center, center, column);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#pedido {
+    @include tamano(100%, 90%);
+    @include flex(flex, center, start, column);
+	background-color: nth($paleta, 4);
+	li {
+        text-shadow: 1px 1px 1px #000000;
+        border-radius: 10px;
+        padding-left: 5px;
+        @include tamano(10%, 90%);
+        @include flex(flex, center, space-between, row);
+		margin: 0 auto;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		&:nth-child(2n-1) {
+			background: nth($paleta, 2);
+		}
+		&:nth-child(2n) {
+			background: nth($paleta, 3);
+		}
+		h4 {
+            @include flex(flex, center, start, row);
+            @include tamano(100%, 100%);
+			&::before {
+				content: " -  ";
+			}
+		}
+		p {
+			padding-right: 30px;
+            @include tamano(100%, 100%);
+            @include flex(flex, center, end, row);
+		}
+	}
+}
+
+////////////////
+#contener{
+	@include tamano(810px, 100%);
+	@include flex(flex, center, space-around, row);
+}
+.contenedor-log{
+	@include tamano(50%, 50%);
+	align-items: center;
+	@include flex(flex, bottom, center, column);
+}
+
+#botones-registro{
+	margin-top: 50px;
+	@include tamano(50%, 100%);
+	@include flex(flex, top, center, row);
+	gap: 50px;
+}
+
+#textbox-registro{
+	gap: 30px;
+	@include tamano(30%, 50%);
+	@include flex(flex, center, center, column);
+	input{
+		border-radius: 5px;
+		color: black;
+		@include tamano(100px, 350px);
+	}
+}
+
+#mostrarError{
+	@include tamano(50px, 100%);
+	color: red;
+	font-size: 1.5em;
+	text-transform: capitalize;
+	@include flex(none, center, center, row);
+}
+#ingresar, #registro, .volver{
+	@include tamano(50px, 100px);
+	border-radius: 5px;
+}
+
+.imagenEmpanada{
+	@include tamano(100%, 50%);
+	@include flex(flex, center, center, row);
+	img{
+		@include tamano(600px, 600px);
+		aspect-ratio: 1/1;
+		border-radius: 10px;
+	}
+}
+
+#formRegistrer{
+	@include tamano(600px, 50%);
+	@include flex(flex, center, center, column);
+	p{
+		color: black;
+		margin-top: 5px;
+	}
+	input{
+		border-radius: 5px;
+		margin-top: 15px;
+		color: black;
+		@include tamano(50px, 300px);
+	}
+}
+#submitt{
+	margin-top: 15px;
+	@include tamano(50px, 100px);
+	border-radius: 5px;
+}
+
+.contenedor{
+	@include tamano(810px, 100%);
+	@include flex(flex, center, center, row);
+
+}
+.izq{
+	margin: 0 auto;
+	@include tamano(75%, 45%);
+	@include flex(flex, center, center, column);
+	border-radius: 10px;
+	background: nth($paleta, 3);
+	p{
+		font-size: 2em;
+		@include flex(flex, center, center, row);
+		@include tamano(200px, 75%);
+		text-align: center;
+		text-transform: capitalize;
+		border-radius: 5px;
+		box-shadow: 0px 0px 0px 0px;
+	}
+	button {
+		@include tamano(50px, 200px);
+		font-size: 1em;
+		text-transform: capitalize;
+		border-radius: 5px;
+		box-shadow: 0px 0px 0px 0px;
+	}
+}
+.der{
+	margin: 0 auto;
+	@include tamano(75%, 45%);
+	@include flex(flex, center, center, row);
+	border-radius: 10px;
+	background: nth($paleta, 2);
+	img{
+		@include tamano(400px, 350px);
+		aspect-ratio: 1/1;
+		&:hover{
+			animation: 1s infinite ease-in-out bounce;
+		}
+	}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-30px);
+	}
+	60% {
+		transform: translateY(-15px);
+	}
+}

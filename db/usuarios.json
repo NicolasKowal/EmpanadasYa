@@ -1,0 +1,62 @@
+[
+    {
+        "user": "nicolas",
+        "password": "1234",
+        "nombre": "Nicolás",
+        "apellido": "Pérez"
+    },
+    {
+        "user": "alfredo",
+        "password": "112255",
+        "nombre": "Alfredo",
+        "apellido": "Gómez"
+    },
+    {
+        "user": "ana",
+        "password": "7890",
+        "nombre": "Ana",
+        "apellido": "Martínez"
+    },
+    {
+        "user": "carlos",
+        "password": "5432",
+        "nombre": "Carlos",
+        "apellido": "López"
+    },
+    {
+        "user": "maria",
+        "password": "9876",
+        "nombre": "María",
+        "apellido": "Hernández"
+    },
+    {
+        "user": "javier",
+        "password": "6543",
+        "nombre": "Javier",
+        "apellido": "Díaz"
+    },
+    {
+        "user": "laura",
+        "password": "8765",
+        "nombre": "Laura",
+        "apellido": "García"
+    },
+    {
+        "user": "pedro",
+        "password": "2109",
+        "nombre": "Pedro",
+        "apellido": "Fernández"
+    },
+    {
+        "user": "sofia",
+        "password": "3344",
+        "nombre": "Sofía",
+        "apellido": "Ramírez"
+    },
+    {
+        "user": "diego",
+        "password": "4556",
+        "nombre": "Diego",
+        "apellido": "Torres"
+    }
+]

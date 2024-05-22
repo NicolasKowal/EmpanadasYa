@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/styles.css" type="text/css" />
+		<script async src="../js/register.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<meta />
+		<title>Document</title>
+	</head>
+	<body>
+		<section id="contener">
+			<div class="imagenEmpanada">
+				<img src="/img/OIG3.jpg" alt="" />
+			</div>
+			<div id="formRegistrer">
+				<p>Nombre</p>
+				<input type="text" class="textbox" id="nombre" placeholder=" Nombre">
+				<p>Apellido</p>
+				<input type="text" class="textbox" id="apellido" placeholder=" Apellido">
+				<p>Nombre de usuario</p>
+				<input type="text" class="textbox" id="user" placeholder=" Usuario">
+				<p>Contraseña</p>
+				<input type="password" class="textbox" id="password1" placeholder=" Contraseña">
+				<input type="password" class="textbox" id="password2" placeholder=" Repetir contraseña">
+				<p id="mostrarError"></p>
+				<div>
+					<button id="submitt">Registrarme</button>
+					<button class="volver" onclick="window.location.href='/pages/login.html'">Volver</button>
+				</div>
+			</div>
+
+		</section>
+	</body>
+	<footer>
+		<p>malatesta</p>
+	</footer>
+</html>
