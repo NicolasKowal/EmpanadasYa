@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 let Usuarios = [];
 
 const RecuperadoJSON = localStorage.getItem("clientes");
@@ -7,14 +9,15 @@ if (RecuperadoJSON) {
         Usuarios.push(elemento);
     });
 }
-console.log(Usuarios);
 
 fetch("../db/usuarios.json")
     .then((response) => response.json())
     .then((datos) => {
         try {
             datos.forEach((element) => {
-                Usuarios.push(element);
+                if(!(datos.find((obj)=> obj ==element))){
+                        Usuarios.push(element);
+                    }
             });
         } catch (error) {
             console.error("Error cargando los datos", error);
@@ -48,37 +51,44 @@ const GuardarStorage = (array, nombre) => {
 let btnSubmit = document.querySelector("#submitt");
 let password1 = document.querySelector("#password1");
 let password2 = document.querySelector("#password2");
-let parrafoError = document.querySelector("#mostrarError");
 let usuario = document.querySelector("#user");
 let nombre = document.querySelector("#nombre");
 let apellido = document.querySelector("#apellido");
 
 
 btnSubmit.addEventListener("click", () => {
-    if (nombre.value && apellido.value && usuario.value && password1.value && password2.value) {
+    if (nombre.value!="" && apellido.value!="" && usuario.value!="" && password1.value!="" && password2.value!="") {
         let validar = validarUsuario(usuario.value);
         if (validar === 0) {
-            parrafoError.style.display = "flex";
-            parrafoError.textContent = "El usuario ya existe";
+            Swal.fire({
+                title: 'El usuario ya existe!',
+                icon: 'error',
+                confirmButtonText: 'Corregir!'
+            });
         } else {
             if (password1.value != password2.value) {
-                parrafoError.style.display = "flex";
-                parrafoError.textContent = "Contraseñas distintas";
+                Swal.fire({
+                    title: 'Contraseñas distintas!',
+                    icon: 'error',
+                    confirmButtonText: 'Corregir!'
+                });
             } else {
                 parrafoError.style.display = "none";
                 crearUsuario(usuario.value, password1.value, nombre.value, apellido.value);
                 GuardarStorage(Usuarios, "clientes");
-                parrafoError.style.display = "flex";
-                parrafoError.textContent = "Usuario agregado exitosamente";
+                Swal.fire({
+                    title: 'Usuario agregado exitosamente!',
+                    icon: 'error',
+                    confirmButtonText: 'Corregir!'
+                });
             }
         }
     } else {
-        parrafoError.style.display = "flex";
-        parrafoError.textContent = "Campos incompletos";
         Swal.fire({
             title: 'Faltan completar campos!',
-            icon: 'error',
+            icon: 'success',
             confirmButtonText: 'Corregir!'
-        })
+        });
     }
+});
 });

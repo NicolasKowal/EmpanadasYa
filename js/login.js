@@ -10,19 +10,23 @@ if (RecuperadoJSON) {
 
 
 fetch("../db/usuarios.json")
-	.then((response) => response.json())
-	.then((datos) => {
-		try {
-			datos.forEach((element) => {
-				Usuarios.push(element);
-			});
-		} catch (error) {
-			console.error("error cargando los datos", error);
-		}
-	})
-	.catch((error) => {
-		console.error("error al levantar el archivo", error);
-	});
+    .then((response) => response.json())
+    .then((datos) => {
+        try {
+            datos.forEach((element) => {
+                if(!(datos.find((obj)=> obj ==element))){
+                        Usuarios.push(element);
+                    }
+            });
+        } catch (error) {
+            console.error("Error cargando los datos", error);
+        }
+    })
+    .catch((error) => {
+        console.error("Error al levantar el archivo", error);
+    });
+
+	console.log(Usuarios);
 
 const buscarUsuario = function (usuario) {
 	return Usuarios.findIndex((element) => element.user === usuario);

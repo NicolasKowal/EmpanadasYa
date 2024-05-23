@@ -142,7 +142,6 @@ function Empanadas() {
 				);
 				GuardarStorage(valorTotal, "precio");
 				parrafo.innerText = "$ " + precioEmpanada * valorTotal;
-				ttt.innerText = "Total a pagar " + parrafo.innerText;
 				GenerarListaPedida(ListaEmpanadasPedidas, mostrarPedido);
 				if (valorTotal === 0) {
 					boton.disabled = true;
@@ -176,7 +175,6 @@ function Empanadas() {
 					);
 					GuardarStorage(valorTotal, "precio");
 					parrafo.innerText = "$ " + precioEmpanada * valorTotal;
-					ttt.innerText = "Total a pagar " + parrafo.innerText;
 					if (valorTotal === 0) {
 						boton.disabled = true;
 					} else {
