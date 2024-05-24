@@ -1,0 +1,217 @@
+@media (max-width: 1400px) {
+    #gustos {
+        li {
+            h4 {
+                font-size: 1.1em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+    #pedido {
+        li {
+            h4 {
+                font-size: 1.1em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #gustos {
+        li {
+            h4 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+    #pedido {
+        li {
+            h4 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .tittle {
+        font-size: 2em;
+    }
+    #gustos {
+        li {
+            h4 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+    #pedido {
+        li {
+            h4 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+    .botoneraytotal {
+        @include tamano(120px, 100%);
+        
+    }
+    #total {
+        font-size: 2em;
+    }
+    #next {
+        @include tamano(35%, 20%);
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 770px) {
+    #time {
+        font-size: .75em;
+    }
+    #gustos {
+        li {
+            h4 {
+                font-size: .9em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    #pedido {
+        h4 {
+            font-size: 1em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+
+}
+
+@media (max-width: 640px) {
+    #time {
+        font-size: .6em;
+    }
+    #botones {
+        @include tamano(50px, 100%);
+        button {
+            @include tamano(40px, 40%);
+            font-size: .8em;
+        }
+    }
+    #gustos {
+        li {
+            h4 {
+                font-size: .9em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    .tittle {
+        font-size: 1em;
+        height: 50px;
+    }
+    #pedido {
+        li{
+            h4 {
+                font-size: .9em;
+                justify-content: start;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    #time {
+        font-size: 1em;
+        height: 75px;
+    }
+    #gustos {
+        li {
+            h4 {
+                font-size: .8em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    #pedido {
+        li{
+            h4 {
+                font-size: .8em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #time {
+        font-size: .8em;
+        height: 75px;
+    }
+    #botones {
+        @include tamano(75px, 100%);
+        button {
+            @include tamano(50px, 40%);
+            font-size: .8em;
+        }
+    }
+    #gustos {
+        li {
+            h4 {
+                font-size: .7em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    #pedido {
+        li{
+            h4 {
+                font-size: .7em;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    .botoneraytotal {
+        @include tamano(100px, 100%);
+        
+    }
+    #total {
+        font-size: 1em;
+    }
+    #next {
+        @include tamano(35%, 30%);
+        font-size: 1em;
+    }
+}

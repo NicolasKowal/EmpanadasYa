@@ -107,13 +107,13 @@ function Empanadas() {
 		div.innerHTML = "";
 		lista.forEach((element) => {
 			let nuevoElemento = document.createElement("h4");
-			nuevoElemento.classList.add('col-6');
+			nuevoElemento.classList.add('col-8');
 			nuevoElemento.innerText = element.empanada;
 			let nuevoBotonMas = document.createElement("button");
-			nuevoBotonMas.classList.add('col-2');
+			nuevoBotonMas.classList.add('col-1');
 			nuevoBotonMas.innerText = "+";
 			let nuevoBotonMenos = document.createElement("button");
-			nuevoBotonMenos.classList.add('col-2');
+			nuevoBotonMenos.classList.add('col-1');
 			nuevoBotonMenos.innerText = "-";
 			let nuevoLI = document.createElement("li");
 			nuevoLI.classList.add('col');
