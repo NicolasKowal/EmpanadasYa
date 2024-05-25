@@ -9,3 +9,8 @@ if (CantidadJSON) {
 
 let ttt = document.querySelector(".ttt");
 ttt.textContent =  "Total a pagar $  " + precioEmpanada * cantidadGuardada;
+
+let PagoRealizado = document.querySelector("#PagoRealizado");
+PagoRealizado.addEventListener("click", ()=>{
+    
+})

@@ -237,7 +237,6 @@
 	text-transform: capitalize;
 }
 
-
 ////////////////
 #contener {
 	@include tamano(800px, 100%);
@@ -290,7 +289,7 @@
 	}
 }
 
-.rowgeris{
+.rowgeris {
 	height: 100%;
 }
 
@@ -308,47 +307,73 @@
 		@include tamano(50px, 300px);
 	}
 }
-.botonera-regis{
+.botonera-regis {
 	@include tamano(150px, 50%);
 	@include flex(flex, center, space-around, row);
-	button{
+	button {
 		@include tamano(50px, 100px);
 		border-radius: 5px;
 	}
 }
+.contenedor-pago {
+	@include flex(flex, center, center, row);
+	flex: 1;
+	height: 810px;
+	width: 90%;
+
+	div {
+		padding: 10px;
+		height: 90%;
+	}
+}
+.izq, .der {
+	margin: 0 15px; // Adding margin to ensure they don't touch
+}
 
 .izq {
 	margin: 0 auto;
-	@include tamano(75%, 45%);
+	@include tamano(100%, 80%);
 	@include flex(flex, center, center, column);
 	border-radius: 10px;
 	background: nth($paleta, 3);
+
 	p {
+		padding-top: 10px;
 		font-size: 2em;
 		@include flex(flex, center, center, row);
-		@include tamano(200px, 75%);
+		@include tamano(40%, 75%);
 		text-align: center;
 		text-transform: capitalize;
 		border-radius: 5px;
-		box-shadow: 0px 0px 0px 0px;
+		box-shadow: 0 0 0 0;
 	}
-	button {
-		@include tamano(50px, 200px);
-		font-size: 1em;
-		text-transform: capitalize;
-		border-radius: 5px;
-		box-shadow: 0px 0px 0px 0px;
+
+	div {
+		@include tamano(20%, 75%);
+		padding-bottom: 10px;
+		@include flex(flex, center, space-around, row);
+
+		button {
+			@include tamano(50px, 200px);
+			font-size: 1em;
+			text-transform: capitalize;
+			border-radius: 5px;
+			box-shadow: 0 0 0 0;
+		}
 	}
 }
+
 .der {
 	margin: 0 auto;
-	@include tamano(75%, 45%);
+	@include tamano(100%, 80%);
 	@include flex(flex, center, center, row);
 	border-radius: 10px;
 	background: nth($paleta, 2);
+
 	img {
-		@include tamano(400px, 350px);
-		aspect-ratio: 1/1;
+		@include tamano(70%, 50%);
+		aspect-ratio: 1 / 1;
+
 		&:hover {
 			animation: 1s infinite ease-in-out bounce;
 		}

@@ -73,12 +73,12 @@ btnSubmit.addEventListener("click", () => {
                     confirmButtonText: 'Corregir!'
                 });
             } else {
-                parrafoError.style.display = "none";
+
                 crearUsuario(usuario.value, password1.value, nombre.value, apellido.value);
                 GuardarStorage(Usuarios, "clientes");
                 Swal.fire({
                     title: 'Usuario agregado exitosamente!',
-                    icon: 'error',
+                    icon: 'success',
                     confirmButtonText: 'Corregir!'
                 });
             }
@@ -86,7 +86,7 @@ btnSubmit.addEventListener("click", () => {
     } else {
         Swal.fire({
             title: 'Faltan completar campos!',
-            icon: 'success',
+            icon: 'error',
             confirmButtonText: 'Corregir!'
         });
     }
