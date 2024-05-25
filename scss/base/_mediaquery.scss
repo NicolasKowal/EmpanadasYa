@@ -42,6 +42,11 @@
             }
         }
     }
+    .imagenEmpanada {
+        img {
+            @include tamano(400px, 400px);
+        }
+    }
 }
 
 @media (max-width: 994px) {
@@ -79,6 +84,12 @@
         @include tamano(35%, 20%);
         font-size: 1em;
     }
+    .imagenEmpanada {
+        img {
+            @include tamano(350px, 350px);
+        }
+    }
+    
 }
 
 @media (max-width: 770px) {
@@ -103,7 +114,10 @@
             font-size: 1em;
         }
     }
-
+    #contener {
+        margin-top: 10px;
+        @include tamano(1000px, 100%);
+    }
 }
 
 @media (max-width: 640px) {
@@ -142,6 +156,13 @@
             }
         }
     }
+    #ingresar,
+    #registro,
+    .volver {
+	@include tamano(50px, 80px);
+	border-radius: 5px;
+    font-size: .8em;
+}
 }
 
 @media (max-width: 490px) {

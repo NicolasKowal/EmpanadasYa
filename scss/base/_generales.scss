@@ -15,6 +15,10 @@ $paleta: (
 	font-size: 1em;
 }
 
+html, body {
+	height: 100%;
+}
+
 body{
 	background: nth($paleta, 6);
 }

@@ -6,6 +6,10 @@
   font-size: 1em;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: #e6e6e6;
 }
@@ -396,17 +400,12 @@ footer p:hover {
 }
 
 #contener {
-  height: 810px;
+  height: 800px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  flex: 1;
 }
 
 .contenedor-log {
-  height: 50%;
-  width: 50%;
   align-items: center;
   display: flex;
   align-items: bottom;
@@ -428,7 +427,7 @@ footer p:hover {
 #textbox-registro {
   gap: 30px;
   height: 30%;
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +436,7 @@ footer p:hover {
 #textbox-registro input {
   border-radius: 5px;
   color: black;
-  height: 100px;
+  height: 50px;
   width: 350px;
 }
 
@@ -462,7 +461,7 @@ footer p:hover {
 }
 
 .imagenEmpanada {
-  height: 100%;
+  height: auto;
   width: 50%;
   display: flex;
   align-items: center;
@@ -472,13 +471,16 @@ footer p:hover {
 .imagenEmpanada img {
   height: 600px;
   width: 600px;
-  aspect-ratio: 1/1;
   border-radius: 10px;
 }
 
+.rowgeris {
+  height: 100%;
+}
+
 #formRegistrer {
-  height: 600px;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -496,20 +498,18 @@ footer p:hover {
   width: 300px;
 }
 
-#submitt {
-  margin-top: 15px;
+.botonera-regis {
+  height: 150px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.botonera-regis button {
   height: 50px;
   width: 100px;
   border-radius: 5px;
-}
-
-.contenedor {
-  height: 810px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .izq {
@@ -603,6 +603,10 @@ footer p:hover {
   #pedido li p {
     font-size: 1em;
   }
+  .imagenEmpanada img {
+    height: 400px;
+    width: 400px;
+  }
 }
 @media (max-width: 994px) {
   .tittle {
@@ -632,6 +636,10 @@ footer p:hover {
     width: 20%;
     font-size: 1em;
   }
+  .imagenEmpanada img {
+    height: 350px;
+    width: 350px;
+  }
 }
 @media (max-width: 770px) {
   #time {
@@ -648,6 +656,11 @@ footer p:hover {
   }
   #pedido p {
     font-size: 1em;
+  }
+  #contener {
+    margin-top: 10px;
+    height: 1000px;
+    width: 100%;
   }
 }
 @media (max-width: 640px) {
@@ -679,6 +692,14 @@ footer p:hover {
   }
   #pedido li p {
     font-size: 0.9em;
+  }
+  #ingresar,
+  #registro,
+  .volver {
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 490px) {

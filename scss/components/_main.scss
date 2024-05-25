@@ -240,11 +240,11 @@
 
 ////////////////
 #contener {
-	@include tamano(810px, 100%);
-	@include flex(flex, center, space-around, row);
+	@include tamano(800px, 100%);
+	flex: 1;
 }
 .contenedor-log {
-	@include tamano(50%, 50%);
+	//@include tamano(100%, 50%);
 	align-items: center;
 	@include flex(flex, bottom, center, column);
 }
@@ -258,12 +258,12 @@
 
 #textbox-registro {
 	gap: 30px;
-	@include tamano(30%, 50%);
+	@include tamano(30%, 100%);
 	@include flex(flex, center, center, column);
 	input {
 		border-radius: 5px;
 		color: black;
-		@include tamano(100px, 350px);
+		@include tamano(50px, 350px);
 	}
 }
 
@@ -282,17 +282,20 @@
 }
 
 .imagenEmpanada {
-	@include tamano(100%, 50%);
+	@include tamano(auto, 50%);
 	@include flex(flex, center, center, row);
 	img {
 		@include tamano(600px, 600px);
-		aspect-ratio: 1/1;
 		border-radius: 10px;
 	}
 }
 
+.rowgeris{
+	height: 100%;
+}
+
 #formRegistrer {
-	@include tamano(600px, 50%);
+	@include tamano(100%, 100%);
 	@include flex(flex, center, center, column);
 	p {
 		color: black;
@@ -305,16 +308,15 @@
 		@include tamano(50px, 300px);
 	}
 }
-#submitt {
-	margin-top: 15px;
-	@include tamano(50px, 100px);
-	border-radius: 5px;
+.botonera-regis{
+	@include tamano(150px, 50%);
+	@include flex(flex, center, space-around, row);
+	button{
+		@include tamano(50px, 100px);
+		border-radius: 5px;
+	}
 }
 
-.contenedor {
-	@include tamano(810px, 100%);
-	@include flex(flex, center, center, row);
-}
 .izq {
 	margin: 0 auto;
 	@include tamano(75%, 45%);
