@@ -15,4 +15,4 @@ y el listado queda en cero para poder realizar otro pedido.
 Utilicé una liberia sweetalert para mostrar en la pestaña "registrarse" y "login" los carteles correspondientes a los errores. Utilicé un try-catch para levantar el archivo; 
 en caso de que haya algún error al levantar el archivo, se muestra un error por consola. Si no, se levanta el archivo y continúa.
 
-Por último, me dediqué a través de la librería Framework Bootstrap a darle web responsive a todo el proyecto, para que se adapte a los distintos modos de pantalla, controlando todo esto mediante dos ramas paralelas de GitHub.
+Por último, me dediqué a través de  Bootstrap a darle web responsive a todo el proyecto, para que se adapte a los distintos modos de pantalla, controlando todo esto mediante dos ramas paralelas de GitHub.
