@@ -59,17 +59,41 @@ btnIngreso.addEventListener("click", () => {
 				textboxPass.value
 			);
 			if (contraseñaIndexada) {
-				window.location.href = "./pago.html";
+				Swal.fire({
+					title: 'Bienvenido!',
+					icon: 'success',
+					confirmButtonText: 'Continuar al pago'
+				}).then(confirmar => {
+					if (confirmar){
+						window.location.href = "./pago.html";
+					}
+				})
+				
 			} else {
-				parrafoError.style.display = "flex";
-				parrafoError.textContent = "contraseña erronea";
+//				parrafoError.style.display = "flex";
+//				parrafoError.textContent = "contraseña erronea";
+				Swal.fire({
+					title: 'contraseña erronea!',
+					icon: 'error',
+					confirmButtonText: 'Corregir!'
+				});
 			}
 		} else {
-			parrafoError.style.display = "flex";
-			parrafoError.textContent = "usuario inexistente";
+//			parrafoError.style.display = "flex";
+//			parrafoError.textContent = "";
+			Swal.fire({
+				title: 'usuario inexistente!',
+				icon: 'error',
+				confirmButtonText: 'Corregir!'
+			});
 		}
 	} else {
-		parrafoError.style.display = "flex";
-		parrafoError.textContent = "campos vacios";
+//		parrafoError.style.display = "flex";
+//		parrafoError.textContent = "campos vacios";
+		Swal.fire({
+            title: 'Faltan completar campos!',
+            icon: 'error',
+            confirmButtonText: 'Corregir!'
+        });
 	}
 });
