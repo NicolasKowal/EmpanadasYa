@@ -34,14 +34,14 @@ function Cookies() {
 	const boton = document.querySelector("#cerrarCookie");
 	boton.addEventListener("click", () => (pantalla.style.display = "none"));
 }
-//setTimeout(Cookies, 2000);
+setTimeout(Cookies, 1500);
 
 function MostrarLaHora() {
 	const time = document.querySelector("#time");
 	let laHora = document.createElement("p");
-	laHora.classList.add('col-6');
+	laHora.classList.add("col-6");
 	let laHoraDeEntrega = document.createElement("p");
-	laHoraDeEntrega.classList.add('col-6');
+	laHoraDeEntrega.classList.add("col-6");
 	time.appendChild(laHora);
 	time.appendChild(laHoraDeEntrega);
 	const opciones = { hour: "2-digit", minute: "2-digit", hour12: false };
@@ -82,7 +82,6 @@ function Empanadas() {
 	parrafo.textContent = "$ " + precioEmpanada * cantidadGuardada;
 	boton.disabled = cantidadGuardada === 0;
 
-
 	const GuardarStorage = (array, nombre) => {
 		const listaJSON = JSON.stringify(array);
 		localStorage.setItem(nombre, listaJSON);
@@ -91,13 +90,13 @@ function Empanadas() {
 		div.innerHTML = "";
 		lista.forEach((element) => {
 			let nuevoElemento = document.createElement("h4");
-			nuevoElemento.classList.add('col-10');
+			nuevoElemento.classList.add("col-10");
 			nuevoElemento.innerText = element.tipo;
 			let nuevaCantidad = document.createElement("p");
-			nuevaCantidad.classList.add('col-2');
+			nuevaCantidad.classList.add("col-2");
 			nuevaCantidad.innerText = element.cantidad;
 			let nuevoLI = document.createElement("li");
-			nuevoLI.classList.add('col');
+			nuevoLI.classList.add("col");
 			nuevoLI.appendChild(nuevoElemento);
 			nuevoLI.appendChild(nuevaCantidad);
 			div.appendChild(nuevoLI);
@@ -107,18 +106,18 @@ function Empanadas() {
 		div.innerHTML = "";
 		lista.forEach((element) => {
 			let nuevoElemento = document.createElement("h4");
-			nuevoElemento.classList.add('col-8');
+			nuevoElemento.classList.add("col-8");
 			nuevoElemento.innerText = element.empanada;
 			let nuevoBotonMas = document.createElement("button");
-			nuevoBotonMas.classList.add('col-1');
+			nuevoBotonMas.classList.add("col-1");
 			nuevoBotonMas.innerText = "+";
 			let nuevoBotonMenos = document.createElement("button");
-			nuevoBotonMenos.classList.add('col-1');
+			nuevoBotonMenos.classList.add("col-1");
 			nuevoBotonMenos.innerText = "-";
 			let nuevoLI = document.createElement("li");
-			nuevoLI.classList.add('col');
+			nuevoLI.classList.add("col");
 			let nuevoTotal = document.createElement("p");
-			nuevoTotal.classList.add('col-2');
+			nuevoTotal.classList.add("col-2");
 			nuevoTotal.innerText = "0";
 			let total = 0;
 			ListaEmpanadasPedidas.forEach((i) => {

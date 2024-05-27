@@ -71,7 +71,7 @@ footer p {
 }
 footer p:hover {
   transition: 1s ease-in-out;
-  animation: AnimateMalatesta 2s ease-in-out;
+  animation: AnimateMalatesta 1s ease-in-out;
 }
 
 .tomarPantalla {
@@ -97,6 +97,7 @@ footer p:hover {
   bottom: 50%;
 }
 #cookies p {
+  border-radius: 10px;
   height: 100px;
   width: 50%;
   display: flex;
@@ -109,6 +110,7 @@ footer p:hover {
   text-transform: capitalize;
 }
 #cookies div {
+  border-radius: 10px;
   background: #f5bd60;
   height: 100px;
   width: 50%;
@@ -118,6 +120,7 @@ footer p:hover {
   flex-direction: row;
 }
 #cookies div button {
+  border-radius: 10px;
   background: #f7ede3;
   height: 50px;
   width: 150px;
@@ -247,14 +250,6 @@ footer p:hover {
   width: 30%;
 }
 
-/*
-.container {
-	h4,
-	p {
-		font-size: 1em;
-		align-items: center;
-	}
-}*/
 #gustos {
   border-radius: 0px 0px 10px 10px;
   margin: 0 auto;
@@ -524,10 +519,6 @@ footer p:hover {
 .contenedor-pago div {
   padding: 10px;
   height: 90%;
-}
-
-.izq, .der {
-  margin: 0 15px;
 }
 
 .izq {

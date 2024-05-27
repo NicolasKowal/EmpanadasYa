@@ -11,6 +11,7 @@
 	position: absolute;
 	bottom: 50%;
 	p {
+		border-radius: 10px;
 		@include tamano(100px, 50%);
 		@include flex(flex, center, center, row);
 		background: nth($paleta, 5);
@@ -19,10 +20,12 @@
 		text-transform: capitalize;
 	}
 	div {
+		border-radius: 10px;
 		background: nth($paleta, 5);
 		@include tamano(100px, 50%);
 		@include flex(flex, center, space-around, row);
 		button {
+			border-radius: 10px;
 			background: nth($paleta, 4);
 			@include tamano(50px, 150px);
 			@include flex(flex, center, space-around, row);
@@ -95,7 +98,6 @@
 	width: 100%;
 }
 .generacionPedido {
-	//@include tamano(90%, 95%);
 	width: 90%;
 	margin: 0 auto;
 }
@@ -111,20 +113,11 @@
 		@include tamano(50px, 30%);
 	}
 }
-/*
-.container {
-	h4,
-	p {
-		font-size: 1em;
-		align-items: center;
-	}
-}*/
 #gustos {
 	border-radius: 0px 0px 10px 10px;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	background: nth($paleta, 4);
-	//@include tamano(auto, 100%);
 	@include flex(flex, center, start, column);
 	li {
 		font-size: 1em;
@@ -145,7 +138,6 @@
 			background: nth($paleta, 3);
 		}
 		h4 {
-			//@include tamano(100%, 80%);
 			@include flex(flex, center, start, row);
 			text-transform: capitalize;
 			&::before {
@@ -154,13 +146,11 @@
 		}
 		p {
 			font-size: 1em;
-			//@include tamano(100%, 10%);
 			height: 100%;
 			@include flex(flex, center, center, row);
 			text-transform: capitalize;
 		}
 		button {
-			//@include tamano(50%, 5%);
 			font-size: 1em;
 			text-transform: capitalize;
 			border-radius: 5px;
@@ -187,7 +177,6 @@
 	letter-spacing: 5px;
 }
 #pedido {
-	//@include tamano(auto, 90%);
 	margin: 0;
 	background-color: nth($paleta, 4);
 	li {
@@ -243,7 +232,6 @@
 	flex: 1;
 }
 .contenedor-log {
-	//@include tamano(100%, 50%);
 	align-items: center;
 	@include flex(flex, bottom, center, column);
 }
@@ -325,9 +313,6 @@
 		padding: 10px;
 		height: 90%;
 	}
-}
-.izq, .der {
-	margin: 0 15px; // Adding margin to ensure they don't touch
 }
 
 .izq {

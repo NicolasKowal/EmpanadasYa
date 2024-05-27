@@ -1,16 +1,16 @@
 footer {
-	background: nth($paleta, 5 );
+	background: nth($paleta, 5);
 	@include tamano(114px, 100%);
-	p{
+	p {
 		@include tamano(90%, 100%);
 		@include flex(flex, end, center, row);
 		color: whitesmoke;
 		text-transform: uppercase;
 		letter-spacing: 7px;
 		font-size: 2em;
-		&:hover{
+		&:hover {
 			transition: 1s ease-in-out;
-			animation: AnimateMalatesta 2s  ease-in-out;
+			animation: AnimateMalatesta 1s ease-in-out;
 		}
 	}
 }

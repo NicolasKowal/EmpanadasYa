@@ -2,31 +2,30 @@ let Usuarios = [];
 
 const RecuperadoJSON = localStorage.getItem("clientes");
 if (RecuperadoJSON) {
-    const Recuperado = JSON.parse(RecuperadoJSON);
-    Recuperado.forEach((elemento) => {
-        Usuarios.push(elemento);
-    });
+	const Recuperado = JSON.parse(RecuperadoJSON);
+	Recuperado.forEach((elemento) => {
+		Usuarios.push(elemento);
+	});
 }
 
-
 fetch("../db/usuarios.json")
-    .then((response) => response.json())
-    .then((datos) => {
-        try {
-            datos.forEach((element) => {
-                if(!(datos.find((obj)=> obj ==element))){
-                        Usuarios.push(element);
-                    }
-            });
-        } catch (error) {
-            console.error("Error cargando los datos", error);
-        }
-    })
-    .catch((error) => {
-        console.error("Error al levantar el archivo", error);
-    });
+	.then((response) => response.json())
+	.then((datos) => {
+		try {
+			datos.forEach((element) => {
+				if (!datos.find((obj) => obj == element)) {
+					Usuarios.push(element);
+				}
+			});
+		} catch (error) {
+			console.error("Error cargando los datos", error);
+		}
+	})
+	.catch((error) => {
+		console.error("Error al levantar el archivo", error);
+	});
 
-	console.log(Usuarios);
+console.log(Usuarios);
 
 const buscarUsuario = function (usuario) {
 	return Usuarios.findIndex((element) => element.user === usuario);
@@ -47,8 +46,6 @@ let textboxUser = document.querySelector("#userId");
 let textboxPass = document.querySelector("#passId");
 let btnIngreso = document.querySelector("#ingresar");
 let btnRegistro = document.querySelector("#registro");
-let parrafoError = document.querySelector("#mostrarError");
-parrafoError.textContent = "error a mostrar";
 
 btnIngreso.addEventListener("click", () => {
 	if (textboxUser.value && textboxPass.value) {
@@ -60,40 +57,33 @@ btnIngreso.addEventListener("click", () => {
 			);
 			if (contraseñaIndexada) {
 				Swal.fire({
-					title: 'Bienvenido!',
-					icon: 'success',
-					confirmButtonText: 'Continuar al pago'
-				}).then(confirmar => {
-					if (confirmar){
+					title: "Bienvenido!",
+					icon: "success",
+					confirmButtonText: "Continuar al pago",
+				}).then((confirmar) => {
+					if (confirmar) {
 						window.location.href = "./pago.html";
 					}
-				})
-				
+				});
 			} else {
-//				parrafoError.style.display = "flex";
-//				parrafoError.textContent = "contraseña erronea";
 				Swal.fire({
-					title: 'contraseña erronea!',
-					icon: 'error',
-					confirmButtonText: 'Corregir!'
+					title: "Contraseña Erronea!",
+					icon: "error",
+					confirmButtonText: "Corregir!",
 				});
 			}
 		} else {
-//			parrafoError.style.display = "flex";
-//			parrafoError.textContent = "";
 			Swal.fire({
-				title: 'usuario inexistente!',
-				icon: 'error',
-				confirmButtonText: 'Corregir!'
+				title: "Usuario Inexistente",
+				icon: "error",
+				confirmButtonText: "Corregir",
 			});
 		}
 	} else {
-//		parrafoError.style.display = "flex";
-//		parrafoError.textContent = "campos vacios";
 		Swal.fire({
-            title: 'Faltan completar campos!',
-            icon: 'error',
-            confirmButtonText: 'Corregir!'
-        });
+			title: "Faltan completar campos!",
+			icon: "error",
+			confirmButtonText: "Corregir",
+		});
 	}
 });
