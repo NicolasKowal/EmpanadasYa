@@ -1,6 +1,8 @@
 El proyecto que estuve construyendo para la entrega final consiste en renovar la idea de la última entrega que hice, mezclándola con la de la primera entrega realizada. 
 Las entregas consistieron en desarrollar un sistema de logueo y de registro, y la última entrega consistió en una aplicación para poder hacer compras online.
 
+Se puede ver una barra en la cual se obtiene la hora en tiempo real y se actualiza cada 1 segundo, mostrando la hora de entrega, 30 minutos mas la hora actual.
+Tambien existe un aviso setinteval de aceptacion de cookies.
 Para ello, al ingresar a la plataforma, el index de la misma se basa en poder seleccionar productos, los cuales se mostrarán en dos listas separadas. 
 Estas listas harán un filtro de una lista principal, generándose un botón "más" y un botón "menos" para cada uno de los elementos. Al pulsar el botón "más", se generará una nueva lista 
 a la cual se le añadirán ítems, y al pulsar el botón "menos" se quitarán. Todo esto se realizará mediante la función reduce, generando un subtotal. 
