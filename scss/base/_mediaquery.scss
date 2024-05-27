@@ -1,0 +1,314 @@
+@media (max-width: 1400px) {
+	#gustos {
+		li {
+			h4 {
+				font-size: 1.1em;
+			}
+			p {
+				font-size: 1.1em;
+			}
+		}
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 1.1em;
+			}
+			p {
+				font-size: 1.1em;
+			}
+		}
+	}
+	.izq {
+		@include tamano(100%, 80%);
+		p {
+			font-size: 1.5em;
+			@include tamano(40%, 75%);
+		}
+		div {
+			@include tamano(20%, 100%);
+			button {
+				@include tamano(50px, 150px);
+				font-size: 1em;
+			}
+		}
+	}
+	.der {
+		@include tamano(100%, 80%);
+		img {
+			@include tamano(80%, 80%);
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	#gustos {
+		li {
+			h4 {
+				font-size: 1em;
+			}
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 1em;
+			}
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+	.imagenEmpanada {
+		img {
+			@include tamano(400px, 400px);
+		}
+	}
+	.der {
+		@include tamano(100%, 80%);
+		img {
+			@include tamano(70%, 70%);
+		}
+	}
+}
+
+@media (max-width: 994px) {
+	.tittle {
+		font-size: 2em;
+	}
+	#gustos {
+		li {
+			h4 {
+				font-size: 1em;
+			}
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 1em;
+			}
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+	.botoneraytotal {
+		@include tamano(120px, 100%);
+	}
+	#total {
+		font-size: 2em;
+	}
+	#next {
+		@include tamano(35%, 20%);
+		font-size: 1em;
+	}
+	.imagenEmpanada {
+		img {
+			@include tamano(350px, 350px);
+		}
+	}
+	.izq {
+		@include tamano(100%, 90%);
+		p {
+			font-size: 1.5em;
+			@include tamano(40%, 75%);
+		}
+		div {
+			@include tamano(20%, 100%);
+			button {
+				@include tamano(50px, 100px);
+				font-size: 0.9em;
+			}
+		}
+	}
+	.der {
+		@include tamano(100%, 90%);
+		img {
+			@include tamano(60%, 80%);
+		}
+	}
+}
+
+@media (max-width: 770px) {	
+		#cookies {
+			p{
+				font-size: 1em;
+			}
+	}
+	#time {
+		font-size: 0.75em;
+	}
+	#gustos {
+		li {
+			h4 {
+				font-size: 0.9em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	#pedido {
+		h4 {
+			font-size: 1em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	#contener {
+		margin-top: 10px;
+		@include tamano(1000px, 100%);
+	}
+	.contenedor-pago {
+		height: 100%;
+		div {
+			height: 60%;
+		}
+	}
+	.izq {
+		width: 90%;
+		height: 100%;
+		p {
+			font-size: 1.1em;
+			@include tamano(40%, 75%);
+		}
+		div {
+			@include tamano(20%, 100%);
+			button {
+				@include tamano(40px, 80px);
+				font-size: 0.8em;
+			}
+		}
+	}
+	.der {
+		height: 100%;
+		width: 90%;
+		img {
+			@include tamano(80%, 50%);
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	#time {
+		font-size: 0.6em;
+	}
+	#botones {
+		@include tamano(50px, 100%);
+		button {
+			@include tamano(40px, 40%);
+			font-size: 0.8em;
+		}
+	}
+	#gustos {
+		li {
+			h4 {
+				font-size: 0.9em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	.tittle {
+		font-size: 1em;
+		height: 50px;
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 0.9em;
+				justify-content: start;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	#ingresar,
+	#registro,
+	.volver {
+		@include tamano(50px, 80px);
+		border-radius: 5px;
+		font-size: 0.8em;
+	}
+}
+
+@media (max-width: 490px) {
+	#time {
+		font-size: 1em;
+		height: 75px;
+	}
+	#gustos {
+		li {
+			h4 {
+				font-size: 0.8em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 0.8em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	#time {
+		font-size: 0.8em;
+		height: 75px;
+	}
+	#botones {
+		@include tamano(75px, 100%);
+		button {
+			@include tamano(50px, 40%);
+			font-size: 0.8em;
+		}
+	}
+	#gustos {
+		li {
+			h4 {
+				font-size: 0.7em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	#pedido {
+		li {
+			h4 {
+				font-size: 0.7em;
+			}
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	.botoneraytotal {
+		@include tamano(100px, 100%);
+	}
+	#total {
+		font-size: 1em;
+	}
+	#next {
+		@include tamano(35%, 30%);
+		font-size: 1em;
+	}
+}

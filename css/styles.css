@@ -4,6 +4,11 @@
   box-sizing: border-box;
   color: #e6e6e6;
   font-size: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -65,9 +70,8 @@ footer p {
   letter-spacing: 7px;
   font-size: 2em;
 }
-footer p:hover {
-  transition: 1s ease-in-out;
-  animation: AnimateMalatesta 3s infinite ease-in-out;
+footer:hover p {
+  animation: AnimateMalatesta 1.5s ease-in-out;
 }
 
 .tomarPantalla {
@@ -93,6 +97,7 @@ footer p:hover {
   bottom: 50%;
 }
 #cookies p {
+  border-radius: 10px;
   height: 100px;
   width: 50%;
   display: flex;
@@ -105,6 +110,7 @@ footer p:hover {
   text-transform: capitalize;
 }
 #cookies div {
+  border-radius: 10px;
   background: #f5bd60;
   height: 100px;
   width: 50%;
@@ -114,6 +120,7 @@ footer p:hover {
   flex-direction: row;
 }
 #cookies div button {
+  border-radius: 10px;
   background: #f7ede3;
   height: 50px;
   width: 150px;
@@ -137,7 +144,6 @@ footer p:hover {
   justify-content: center;
   flex-direction: row;
   font-size: 1em;
-  background: #f7ede3;
   color: whitesmoke;
   letter-spacing: 3px;
 }
@@ -202,7 +208,7 @@ footer p:hover {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-  font-size: 3em;
+  font-size: 1em;
   text-transform: capitalize;
   height: 200px;
   width: 50%;
@@ -217,29 +223,21 @@ footer p:hover {
 }
 
 #contenedor {
-  height: 750px;
+  min-height: 750px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .generacionPedido {
-  height: 95%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #botones {
   border-radius: 10px 10px 0px 0px;
   background: #84a59e;
   margin: 0 auto;
-  height: 15%;
-  width: 90%;
+  height: 75px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -247,22 +245,23 @@ footer p:hover {
 }
 #botones button {
   margin: 30px;
-  height: 65%;
-  width: 25%;
+  border-radius: 10px;
+  height: 50px;
+  width: 30%;
 }
 
 #gustos {
   border-radius: 0px 0px 10px 10px;
   margin: 0 auto;
+  margin-bottom: 10px;
   background: #f7ede3;
-  height: 100%;
-  width: 90%;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
 }
 #gustos li {
+  font-size: 1em;
   text-shadow: 1px 1px 1px #000000;
   border-radius: 10px;
   margin: 0 auto;
@@ -270,7 +269,7 @@ footer p:hover {
   margin-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  height: 10%;
+  height: 100%;
   width: 90%;
   display: flex;
   align-items: center;
@@ -285,8 +284,6 @@ footer p:hover {
   background: #f28582;
 }
 #gustos li h4 {
-  height: 100%;
-  width: 80%;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -297,8 +294,8 @@ footer p:hover {
   content: " - ";
 }
 #gustos li p {
+  font-size: 1em;
   height: 100%;
-  width: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,8 +303,6 @@ footer p:hover {
   text-transform: capitalize;
 }
 #gustos li button {
-  height: 50%;
-  width: 5%;
   font-size: 1em;
   text-transform: capitalize;
   border-radius: 5px;
@@ -319,48 +314,16 @@ footer p:hover {
 }
 
 .continuar {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  height: 95%;
-  width: 50%;
-}
-
-.botoneraytotal {
-  border-radius: 0px 0px 10px 10px;
-  height: 25%;
+  margin-bottom: 10px;
   width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  background: #84a59e;
-}
-
-#next {
-  height: 40%;
-  width: 20%;
   margin: 0 auto;
-  font-size: 1em;
-  text-transform: capitalize;
-}
-
-#total {
-  margin: 0 auto;
-  letter-spacing: 3px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 2em;
-  height: 50%;
-  width: auto;
 }
 
 .tittle {
   border-radius: 10px 10px 0px 0px;
   background: #84a59e;
-  height: 20%;
-  width: 90%;
+  height: 75px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,12 +334,7 @@ footer p:hover {
 }
 
 #pedido {
-  height: 100%;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
+  margin: 0;
   background-color: #f7ede3;
 }
 #pedido li {
@@ -399,39 +357,50 @@ footer p:hover {
 #pedido li:nth-child(2n) {
   background: #f28582;
 }
-#pedido li h4 {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-}
 #pedido li h4::before {
   content: " -  ";
 }
 #pedido li p {
   padding-right: 30px;
-  height: 100%;
+}
+
+.botoneraytotal {
+  margin-bottom: 20px;
+  border-radius: 0px 0px 10px 10px;
+  height: 125px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
-  flex-direction: row;
+  justify-content: start;
+  flex-direction: column;
+  background: #84a59e;
+}
+
+#total {
+  margin: 0 auto;
+  letter-spacing: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 2em;
+  height: 50%;
+  width: auto;
+}
+
+#next {
+  height: 40%;
+  width: 20%;
+  margin: 0 auto;
+  font-size: 1em;
+  text-transform: capitalize;
 }
 
 #contener {
-  height: 810px;
+  height: 800px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  flex: 1;
 }
 
 .contenedor-log {
-  height: 50%;
-  width: 50%;
   align-items: center;
   display: flex;
   align-items: bottom;
@@ -453,7 +422,7 @@ footer p:hover {
 #textbox-registro {
   gap: 30px;
   height: 30%;
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,7 +431,7 @@ footer p:hover {
 #textbox-registro input {
   border-radius: 5px;
   color: black;
-  height: 100px;
+  height: 50px;
   width: 350px;
 }
 
@@ -478,14 +447,16 @@ footer p:hover {
   flex-direction: row;
 }
 
-#ingresar, #registro, .volver {
+#ingresar,
+#registro,
+.volver {
   height: 50px;
   width: 100px;
   border-radius: 5px;
 }
 
 .imagenEmpanada {
-  height: 100%;
+  height: auto;
   width: 50%;
   display: flex;
   align-items: center;
@@ -495,13 +466,16 @@ footer p:hover {
 .imagenEmpanada img {
   height: 600px;
   width: 600px;
-  aspect-ratio: 1/1;
   border-radius: 10px;
 }
 
+.rowgeris {
+  height: 100%;
+}
+
 #formRegistrer {
-  height: 600px;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,26 +493,38 @@ footer p:hover {
   width: 300px;
 }
 
-#submitt {
-  margin-top: 15px;
+.botonera-regis {
+  height: 150px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.botonera-regis button {
   height: 50px;
   width: 100px;
   border-radius: 5px;
 }
 
-.contenedor {
-  height: 810px;
-  width: 100%;
+.contenedor-pago {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex: 1;
+  height: 810px;
+  width: 90%;
+}
+.contenedor-pago div {
+  padding: 10px;
+  height: 90%;
 }
 
 .izq {
   margin: 0 auto;
-  height: 75%;
-  width: 45%;
+  height: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -547,31 +533,41 @@ footer p:hover {
   background: #f28582;
 }
 .izq p {
+  padding-top: 10px;
   font-size: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height: 200px;
+  height: 40%;
   width: 75%;
   text-align: center;
   text-transform: capitalize;
   border-radius: 5px;
-  box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0 0 0 0;
 }
-.izq button {
+.izq div {
+  height: 20%;
+  width: 75%;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.izq div button {
   height: 50px;
   width: 200px;
   font-size: 1em;
   text-transform: capitalize;
   border-radius: 5px;
-  box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0 0 0 0;
 }
 
 .der {
   margin: 0 auto;
-  height: 75%;
-  width: 45%;
+  height: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,8 +576,8 @@ footer p:hover {
   background: #f5cac2;
 }
 .der img {
-  height: 400px;
-  width: 350px;
+  height: 70%;
+  width: 50%;
   aspect-ratio: 1/1;
 }
 .der img:hover {
@@ -597,6 +593,284 @@ footer p:hover {
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+@media (max-width: 1400px) {
+  #gustos li h4 {
+    font-size: 1.1em;
+  }
+  #gustos li p {
+    font-size: 1.1em;
+  }
+  #pedido li h4 {
+    font-size: 1.1em;
+  }
+  #pedido li p {
+    font-size: 1.1em;
+  }
+  .izq {
+    height: 100%;
+    width: 80%;
+  }
+  .izq p {
+    font-size: 1.5em;
+    height: 40%;
+    width: 75%;
+  }
+  .izq div {
+    height: 20%;
+    width: 100%;
+  }
+  .izq div button {
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+  }
+  .der {
+    height: 100%;
+    width: 80%;
+  }
+  .der img {
+    height: 80%;
+    width: 80%;
+  }
+}
+@media (max-width: 1100px) {
+  #gustos li h4 {
+    font-size: 1em;
+  }
+  #gustos li p {
+    font-size: 1em;
+  }
+  #pedido li h4 {
+    font-size: 1em;
+  }
+  #pedido li p {
+    font-size: 1em;
+  }
+  .imagenEmpanada img {
+    height: 400px;
+    width: 400px;
+  }
+  .der {
+    height: 100%;
+    width: 80%;
+  }
+  .der img {
+    height: 70%;
+    width: 70%;
+  }
+}
+@media (max-width: 994px) {
+  .tittle {
+    font-size: 2em;
+  }
+  #gustos li h4 {
+    font-size: 1em;
+  }
+  #gustos li p {
+    font-size: 1em;
+  }
+  #pedido li h4 {
+    font-size: 1em;
+  }
+  #pedido li p {
+    font-size: 1em;
+  }
+  .botoneraytotal {
+    height: 120px;
+    width: 100%;
+  }
+  #total {
+    font-size: 2em;
+  }
+  #next {
+    height: 35%;
+    width: 20%;
+    font-size: 1em;
+  }
+  .imagenEmpanada img {
+    height: 350px;
+    width: 350px;
+  }
+  .izq {
+    height: 100%;
+    width: 90%;
+  }
+  .izq p {
+    font-size: 1.5em;
+    height: 40%;
+    width: 75%;
+  }
+  .izq div {
+    height: 20%;
+    width: 100%;
+  }
+  .izq div button {
+    height: 50px;
+    width: 100px;
+    font-size: 0.9em;
+  }
+  .der {
+    height: 100%;
+    width: 90%;
+  }
+  .der img {
+    height: 60%;
+    width: 80%;
+  }
+}
+@media (max-width: 770px) {
+  #cookies p {
+    font-size: 1em;
+  }
+  #time {
+    font-size: 0.75em;
+  }
+  #gustos li h4 {
+    font-size: 0.9em;
+  }
+  #gustos li p {
+    font-size: 0.9em;
+  }
+  #pedido h4 {
+    font-size: 1em;
+  }
+  #pedido p {
+    font-size: 1em;
+  }
+  #contener {
+    margin-top: 10px;
+    height: 1000px;
+    width: 100%;
+  }
+  .contenedor-pago {
+    height: 100%;
+  }
+  .contenedor-pago div {
+    height: 60%;
+  }
+  .izq {
+    width: 90%;
+    height: 100%;
+  }
+  .izq p {
+    font-size: 1.1em;
+    height: 40%;
+    width: 75%;
+  }
+  .izq div {
+    height: 20%;
+    width: 100%;
+  }
+  .izq div button {
+    height: 40px;
+    width: 80px;
+    font-size: 0.8em;
+  }
+  .der {
+    height: 100%;
+    width: 90%;
+  }
+  .der img {
+    height: 80%;
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  #time {
+    font-size: 0.6em;
+  }
+  #botones {
+    height: 50px;
+    width: 100%;
+  }
+  #botones button {
+    height: 40px;
+    width: 40%;
+    font-size: 0.8em;
+  }
+  #gustos li h4 {
+    font-size: 0.9em;
+  }
+  #gustos li p {
+    font-size: 0.9em;
+  }
+  .tittle {
+    font-size: 1em;
+    height: 50px;
+  }
+  #pedido li h4 {
+    font-size: 0.9em;
+    justify-content: start;
+  }
+  #pedido li p {
+    font-size: 0.9em;
+  }
+  #ingresar,
+  #registro,
+  .volver {
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 490px) {
+  #time {
+    font-size: 1em;
+    height: 75px;
+  }
+  #gustos li h4 {
+    font-size: 0.8em;
+  }
+  #gustos li p {
+    font-size: 0.9em;
+  }
+  #pedido li h4 {
+    font-size: 0.8em;
+  }
+  #pedido li p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 400px) {
+  #time {
+    font-size: 0.8em;
+    height: 75px;
+  }
+  #botones {
+    height: 75px;
+    width: 100%;
+  }
+  #botones button {
+    height: 50px;
+    width: 40%;
+    font-size: 0.8em;
+  }
+  #gustos li h4 {
+    font-size: 0.7em;
+  }
+  #gustos li p {
+    font-size: 0.9em;
+  }
+  #pedido li h4 {
+    font-size: 0.7em;
+  }
+  #pedido li p {
+    font-size: 0.9em;
+  }
+  .botoneraytotal {
+    height: 100px;
+    width: 100%;
+  }
+  #total {
+    font-size: 1em;
+  }
+  #next {
+    height: 35%;
+    width: 30%;
+    font-size: 1em;
   }
 }
 

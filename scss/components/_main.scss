@@ -1,78 +1,80 @@
 .tomarPantalla {
 	position: absolute;
 	background: nth($paleta, 4);
-    @include tamano(100%, 100%);
-    @include flex(none, center, center, row);
+	@include tamano(100%, 100%);
+	@include flex(none, center, center, row);
 }
 #cookies {
 	background: nth($paleta, 4);
-    @include tamano(200px, 100%);
-    @include flex(flex, center, center, column);
+	@include tamano(200px, 100%);
+	@include flex(flex, center, center, column);
 	position: absolute;
 	bottom: 50%;
 	p {
-        @include tamano(100px, 50%);
-        @include flex(flex, center, center, row);
+		border-radius: 10px;
+		@include tamano(100px, 50%);
+		@include flex(flex, center, center, row);
 		background: nth($paleta, 5);
 		font-size: 2em;
 		text-align: center;
 		text-transform: capitalize;
 	}
 	div {
+		border-radius: 10px;
 		background: nth($paleta, 5);
-        @include tamano(100px, 50%);
-        @include flex(flex, center, space-around, row);
-			button {
-				background: nth($paleta, 4);
-                @include tamano(50px, 150px);
-                @include flex(flex, center, space-around, row);
-                text-transform: capitalize;
-				a {
-					text-decoration: none;
-					color: black;
-				}
+		@include tamano(100px, 50%);
+		@include flex(flex, center, space-around, row);
+		button {
+			border-radius: 10px;
+			background: nth($paleta, 4);
+			@include tamano(50px, 150px);
+			@include flex(flex, center, space-around, row);
+			text-transform: capitalize;
+			a {
+				text-decoration: none;
+				color: black;
 			}
 		}
 	}
+}
 #time {
 	margin-bottom: 10px;
-    @include tamano(50px, 100%);
-    @include flex(flex, center, center, row);
+	@include tamano(50px, 100%);
+	@include flex(flex, center, center, row);
 	font-size: 1em;
-	background: nth($paleta, 4);
+	//	background: nth($paleta, 4);
 	color: whitesmoke;
 	letter-spacing: 3px;
 	p {
 		background: nth($paleta, 1);
-        @include tamano(100%, 50%);
-        @include flex(flex, center, start, row);
+		@include tamano(100%, 50%);
+		@include flex(flex, center, start, row);
 		padding-left: 30px;
-
-	}:nth-child(2n){
-            @include flex(flex, center, center, row);
-        }
+	}
+	:nth-child(2n) {
+		@include flex(flex, center, center, row);
+	}
 }
 .comp {
-    @include tamano(90%, 100%);
-    @include flex(none, center, center, row);
+	@include tamano(90%, 100%);
+	@include flex(none, center, center, row);
 	position: absolute;
 	top: 0;
 	margin: 0 auto;
 }
 .divClose {
-    @include tamano(10%, 100%);
-    @include flex(flex, center, end, row);
-
+	@include tamano(10%, 100%);
+	@include flex(flex, center, end, row);
 }
 #close {
 	margin-right: 1%;
-    @include tamano(50px, 50px);
+	@include tamano(50px, 50px);
 	font-size: 1em;
 }
 #pago {
 	background: nth($paleta, 3);
-    @include tamano(95%, 90%);
-    @include flex(flex, center, center, column);
+	@include tamano(95%, 90%);
+	@include flex(flex, center, center, column);
 
 	color: whitesmoke;
 	border-radius: 10px;
@@ -81,51 +83,53 @@
 		padding-left: 30px;
 		padding-right: 30px;
 		text-align: center;
-		font-size: 3em;
+		font-size: 1em;
 		text-transform: capitalize;
-        @include tamano(200px, 50%);
-        @include flex(flex, center, center, row);
+		@include tamano(200px, 50%);
+		@include flex(flex, center, center, row);
 	}
 	img {
-        @include tamano(300px, 250px);
+		@include tamano(300px, 250px);
 	}
 }
 
 #contenedor {
-    @include tamano(750px, 100%);
-    @include flex(flex, center, center, row);
+	min-height: 750px;
+	width: 100%;
 }
 .generacionPedido {
-    @include tamano(95%,50%);
-    @include flex(flex, center, center, column);
+	width: 90%;
+	margin: 0 auto;
 }
 #botones {
-    border-radius: 10px 10px 0px 0px ;
+	border-radius: 10px 10px 0px 0px;
 	background: nth($paleta, 1);
 	margin: 0 auto;
-    @include tamano(15%, 90%);
-    @include flex(flex, center, space-around, row);
+	@include tamano(75px, 100%);
+	@include flex(flex, center, space-around, row);
 	button {
 		margin: 30px;
-        @include tamano(65%, 25%);
+		border-radius: 10px;
+		@include tamano(50px, 30%);
 	}
 }
 #gustos {
 	border-radius: 0px 0px 10px 10px;
 	margin: 0 auto;
+	margin-bottom: 10px;
 	background: nth($paleta, 4);
-    @include tamano(100%, 90%);
-    @include flex(flex, center, start, column);
+	@include flex(flex, center, start, column);
 	li {
-        text-shadow: 1px 1px 1px #000000;
-        border-radius: 10px;
+		font-size: 1em;
+		text-shadow: 1px 1px 1px #000000;
+		border-radius: 10px;
 		margin: 0 auto;
 		margin-top: 5px;
 		margin-bottom: 5px;
 		padding-left: 5px;
 		padding-right: 5px;
-        @include tamano(10%, 90%);
-        @include flex(flex, center, space-around, row);
+		@include tamano(100%, 90%);
+		@include flex(flex, center, space-around, row);
 		text-transform: capitalize;
 		&:nth-child(2n-1) {
 			background: nth($paleta, 2);
@@ -134,20 +138,19 @@
 			background: nth($paleta, 3);
 		}
 		h4 {
-            @include tamano(100%, 80%);
-            @include flex(flex, center, start, row);
+			@include flex(flex, center, start, row);
 			text-transform: capitalize;
 			&::before {
 				content: " - ";
 			}
 		}
 		p {
-            @include tamano(100%, 10%);
-            @include flex(flex, center, center, row);
+			font-size: 1em;
+			height: 100%;
+			@include flex(flex, center, center, row);
 			text-transform: capitalize;
 		}
 		button {
-            @include tamano(50%, 5%);
 			font-size: 1em;
 			text-transform: capitalize;
 			border-radius: 5px;
@@ -160,48 +163,28 @@
 	}
 }
 .continuar {
-    @include flex(flex, center, start, column);
-    @include tamano(95%, 50%);
+	margin-bottom: 10px;
+	width: 90%;
+	margin: 0 auto;
 }
-.botoneraytotal {
-	border-radius: 0px 0px 10px 10px;
-    @include tamano(25%, 90%);
-    @include flex(flex, center, start, column);
+.tittle {
+	border-radius: 10px 10px 0px 0px;
 	background: nth($paleta, 1);
-}
-#next {
-    @include tamano(40%, 20%);
-	margin: 0 auto;
-	font-size: 1em;
-	text-transform: capitalize;
-}
-#total {
-	margin: 0 auto;
-    letter-spacing: 3px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-size: 2em;
-    @include tamano(50%, auto);
-}
-.tittle{
-    border-radius: 10px 10px 0px 0px ;
-    background: nth($paleta, 1);
-    @include tamano(20%, 90%);
-    @include flex(flex, center, center, column);
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+	@include tamano(75px, 100%);
+	@include flex(flex, center, center, column);
+	font-size: 2.5em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 #pedido {
-    @include tamano(100%, 90%);
-    @include flex(flex, center, start, column);
+	margin: 0;
 	background-color: nth($paleta, 4);
 	li {
-        text-shadow: 1px 1px 1px #000000;
-        border-radius: 10px;
-        padding-left: 5px;
-        @include tamano(10%, 90%);
-        @include flex(flex, center, space-between, row);
+		text-shadow: 1px 1px 1px #000000;
+		border-radius: 10px;
+		padding-left: 5px;
+		@include tamano(10%, 90%);
+		@include flex(flex, center, space-between, row);
 		margin: 0 auto;
 		margin-top: 5px;
 		margin-bottom: 5px;
@@ -212,136 +195,182 @@
 			background: nth($paleta, 3);
 		}
 		h4 {
-            @include flex(flex, center, start, row);
-            @include tamano(100%, 100%);
 			&::before {
 				content: " -  ";
 			}
 		}
 		p {
 			padding-right: 30px;
-            @include tamano(100%, 100%);
-            @include flex(flex, center, end, row);
 		}
 	}
 }
+.botoneraytotal {
+	margin-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+	@include tamano(125px, 100%);
+	@include flex(flex, center, start, column);
+	background: nth($paleta, 1);
+}
+#total {
+	margin: 0 auto;
+	letter-spacing: 3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 2em;
+	@include tamano(50%, auto);
+}
+#next {
+	@include tamano(40%, 20%);
+	margin: 0 auto;
+	font-size: 1em;
+	text-transform: capitalize;
+}
 
 ////////////////
-#contener{
-	@include tamano(810px, 100%);
-	@include flex(flex, center, space-around, row);
+#contener {
+	@include tamano(800px, 100%);
+	flex: 1;
 }
-.contenedor-log{
-	@include tamano(50%, 50%);
+.contenedor-log {
 	align-items: center;
 	@include flex(flex, bottom, center, column);
 }
 
-#botones-registro{
+#botones-registro {
 	margin-top: 50px;
 	@include tamano(50%, 100%);
 	@include flex(flex, top, center, row);
 	gap: 50px;
 }
 
-#textbox-registro{
+#textbox-registro {
 	gap: 30px;
-	@include tamano(30%, 50%);
+	@include tamano(30%, 100%);
 	@include flex(flex, center, center, column);
-	input{
+	input {
 		border-radius: 5px;
 		color: black;
-		@include tamano(100px, 350px);
+		@include tamano(50px, 350px);
 	}
 }
 
-#mostrarError{
+#mostrarError {
 	@include tamano(50px, 100%);
 	color: red;
 	font-size: 1.5em;
 	text-transform: capitalize;
 	@include flex(none, center, center, row);
 }
-#ingresar, #registro, .volver{
+#ingresar,
+#registro,
+.volver {
 	@include tamano(50px, 100px);
 	border-radius: 5px;
 }
 
-.imagenEmpanada{
-	@include tamano(100%, 50%);
+.imagenEmpanada {
+	@include tamano(auto, 50%);
 	@include flex(flex, center, center, row);
-	img{
+	img {
 		@include tamano(600px, 600px);
-		aspect-ratio: 1/1;
 		border-radius: 10px;
 	}
 }
 
-#formRegistrer{
-	@include tamano(600px, 50%);
+.rowgeris {
+	height: 100%;
+}
+
+#formRegistrer {
+	@include tamano(100%, 100%);
 	@include flex(flex, center, center, column);
-	p{
+	p {
 		color: black;
 		margin-top: 5px;
 	}
-	input{
+	input {
 		border-radius: 5px;
 		margin-top: 15px;
 		color: black;
 		@include tamano(50px, 300px);
 	}
 }
-#submitt{
-	margin-top: 15px;
-	@include tamano(50px, 100px);
-	border-radius: 5px;
+.botonera-regis {
+	@include tamano(150px, 50%);
+	@include flex(flex, center, space-around, row);
+	button {
+		@include tamano(50px, 100px);
+		border-radius: 5px;
+	}
 }
-
-.contenedor{
-	@include tamano(810px, 100%);
+.contenedor-pago {
 	@include flex(flex, center, center, row);
+	flex: 1;
+	height: 810px;
+	width: 90%;
 
+	div {
+		padding: 10px;
+		height: 90%;
+	}
 }
-.izq{
+
+.izq {
 	margin: 0 auto;
-	@include tamano(75%, 45%);
+	@include tamano(100%, 80%);
 	@include flex(flex, center, center, column);
 	border-radius: 10px;
 	background: nth($paleta, 3);
-	p{
+
+	p {
+		padding-top: 10px;
 		font-size: 2em;
 		@include flex(flex, center, center, row);
-		@include tamano(200px, 75%);
+		@include tamano(40%, 75%);
 		text-align: center;
 		text-transform: capitalize;
 		border-radius: 5px;
-		box-shadow: 0px 0px 0px 0px;
+		box-shadow: 0 0 0 0;
 	}
-	button {
-		@include tamano(50px, 200px);
-		font-size: 1em;
-		text-transform: capitalize;
-		border-radius: 5px;
-		box-shadow: 0px 0px 0px 0px;
+
+	div {
+		@include tamano(20%, 75%);
+		padding-bottom: 10px;
+		@include flex(flex, center, space-around, row);
+
+		button {
+			@include tamano(50px, 200px);
+			font-size: 1em;
+			text-transform: capitalize;
+			border-radius: 5px;
+			box-shadow: 0 0 0 0;
+		}
 	}
 }
-.der{
+
+.der {
 	margin: 0 auto;
-	@include tamano(75%, 45%);
+	@include tamano(100%, 80%);
 	@include flex(flex, center, center, row);
 	border-radius: 10px;
 	background: nth($paleta, 2);
-	img{
-		@include tamano(400px, 350px);
-		aspect-ratio: 1/1;
-		&:hover{
+
+	img {
+		@include tamano(70%, 50%);
+		aspect-ratio: 1 / 1;
+
+		&:hover {
 			animation: 1s infinite ease-in-out bounce;
 		}
 	}
 }
 
 @keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
 		transform: translateY(0);
 	}
 	40% {
