@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: #e6e6e6;
   font-size: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -69,9 +70,8 @@ footer p {
   letter-spacing: 7px;
   font-size: 2em;
 }
-footer p:hover {
-  transition: 1s ease-in-out;
-  animation: AnimateMalatesta 1s ease-in-out;
+footer:hover p {
+  animation: AnimateMalatesta 1.5s ease-in-out;
 }
 
 .tomarPantalla {
@@ -721,6 +721,9 @@ footer p:hover {
   }
 }
 @media (max-width: 770px) {
+  #cookies p {
+    font-size: 1em;
+  }
   #time {
     font-size: 0.75em;
   }

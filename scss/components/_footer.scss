@@ -8,9 +8,10 @@ footer {
 		text-transform: uppercase;
 		letter-spacing: 7px;
 		font-size: 2em;
-		&:hover {
-			transition: 1s ease-in-out;
-			animation: AnimateMalatesta 1s ease-in-out;
+	}		
+	&:hover {
+		p{
+			animation: AnimateMalatesta 1.5s ease-in-out;
 		}
-	}
+		}
 }

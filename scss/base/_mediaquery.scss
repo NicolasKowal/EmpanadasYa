@@ -136,7 +136,12 @@
 	}
 }
 
-@media (max-width: 770px) {
+@media (max-width: 770px) {	
+		#cookies {
+			p{
+				font-size: 1em;
+			}
+	}
 	#time {
 		font-size: 0.75em;
 	}
