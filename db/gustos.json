@@ -1,0 +1,82 @@
+[
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Española" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Capresse" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Verduras al horno" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Caponata" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Brócoli y queso azul" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Calabaza asada" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Champiñones a la provenzal" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Hongos y espinaca" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Queso y cebolla caramelizada" 
+    },
+	{ 
+        "tipo": "vegetarianas", 
+        "empanada": "Ratatuille" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Berenjena y pimiento" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Espárragos y tofu" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Hongos y cebolla caramelizada" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Papas al curry" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Brócoli y tofu ahumado" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Calabaza y maíz" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Aceitunas y tomate seco" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Alcachofa y espinaca" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Lentejas y cebolla caramelizada" 
+    },
+	{ 
+        "tipo": "veganas", 
+        "empanada": "Zapallo italiano y berenjena" 
+    }
+]
