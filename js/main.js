@@ -74,7 +74,8 @@ function Empanadas() {
 	let mostrarPedido = document.querySelector("#pedido");
 	let boton = document.querySelector("#next");
 	let parrafo = document.querySelector("#total");
-	parrafo.textContent = "$ " + precioEmpanada * cantidadGuardada;
+	cantidadGuardada = 1500* cantidadGuardada;
+	parrafo.textContent = "$ " + cantidadGuardada;
 	boton.disabled = cantidadGuardada === 0;
 
 	const GuardarStorage = (array, nombre) => {

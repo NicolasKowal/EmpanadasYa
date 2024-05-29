@@ -1,4 +1,3 @@
-const precioEmpanada = 1500;
 let cantidadGuardada;
 let ListaEmpanadasPedidas = [];
 
@@ -12,6 +11,9 @@ if (CantidadJSON) {
 	const Cantidad = JSON.parse(CantidadJSON);
 	cantidadGuardada = Cantidad;
 }
+else{
+	cantidadGuardada= 0;
+}
 
 const RecuperadoJSON = localStorage.getItem("pedido");
 if (RecuperadoJSON) {
@@ -20,9 +22,9 @@ if (RecuperadoJSON) {
 		ListaEmpanadasPedidas.push(elemento);
 	});
 }
-
+let precioEmpanada = 1500 * cantidadGuardada;
 let ttt = document.querySelector(".ttt");
-ttt.textContent = "Total a pagar $  " + precioEmpanada * cantidadGuardada;
+ttt.textContent = "Total a pagar $  " + precioEmpanada;
 
 let PagoRealizado = document.querySelector("#PagoRealizado");
 PagoRealizado.addEventListener("click", () => {

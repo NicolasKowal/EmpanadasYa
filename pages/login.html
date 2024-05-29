@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/styles.css" type="text/css" />
-		<script async src="../js/login.js"></script>
+		<script defer src="../js/login.js"></script>
 		<link rel="icon" type="image/jpg" href="../img/empanada.png"/>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<link
@@ -39,17 +39,13 @@
 					</div>
 					<p id="mostrarError"></p>
 					<div id="botones-registro">
-						<button id="ingresar">Ingresar</button>
-						<button
-							id="registro"
-							onclick="window.location.href='../pages/registrarse.html'"
-						>
+						<button id="ingresar">
+							Ingresar
+						</button>
+						<button id="registro" onclick="window.location.href='../pages/registrarse.html'">
 							Registrarse
 						</button>
-						<button
-							class="volver"
-							onclick="window.location.href='../index.html'"
-						>
+						<button	class="volver" onclick="window.location.href='../index.html'">
 							Volver
 						</button>
 					</div>
