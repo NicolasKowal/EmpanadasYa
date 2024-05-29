@@ -1,5 +1,5 @@
 let ListaEmpanadasPedidas = [];
-let saboresDeEmpanadas =[];
+let saboresDeEmpanadas = [];
 
 class Empanada {
 	constructor(tipo, cantidad) {
@@ -74,7 +74,7 @@ function Empanadas() {
 	let mostrarPedido = document.querySelector("#pedido");
 	let boton = document.querySelector("#next");
 	let parrafo = document.querySelector("#total");
-	cantidadGuardada = 1500* cantidadGuardada;
+	cantidadGuardada = 1500 * cantidadGuardada;
 	parrafo.textContent = "$ " + cantidadGuardada;
 	boton.disabled = cantidadGuardada === 0;
 

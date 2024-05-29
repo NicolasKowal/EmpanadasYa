@@ -1,26 +1,33 @@
 $paleta: (
-	#84a59e, //titulos
-	#f5cac2, //li
-	#f28582, //li
-	#f7ede3, //fondos
-	#f5bd60, //footer
-	#e6e6e6 //letra 
+	#84a59e,
+	//titulos
+	#f5cac2,
+	//li
+	#f28582,
+	//li
+	#f7ede3,
+	//fondos
+	#f5bd60,
+	//footer
+	#e6e6e6 //letra
 );
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	color: nth($paleta, 6 );
+	color: nth($paleta, 6);
 	font-size: 1em;
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-html, body {
+html,
+body {
 	height: 100%;
 }
 
-body{
+body {
 	background: nth($paleta, 6);
 }
 

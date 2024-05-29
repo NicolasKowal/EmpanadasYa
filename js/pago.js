@@ -10,9 +10,8 @@ const CantidadJSON = localStorage.getItem("precio");
 if (CantidadJSON) {
 	const Cantidad = JSON.parse(CantidadJSON);
 	cantidadGuardada = Cantidad;
-}
-else{
-	cantidadGuardada= 0;
+} else {
+	cantidadGuardada = 0;
 }
 
 const RecuperadoJSON = localStorage.getItem("pedido");
