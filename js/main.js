@@ -59,7 +59,6 @@ function MostrarLaHora() {
 	};
 	setInterval(Actualizar, 1000);
 }
-MostrarLaHora();
 
 function Empanadas() {
 	const precioEmpanada = 1500;
