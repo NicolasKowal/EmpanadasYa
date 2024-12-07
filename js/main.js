@@ -8,7 +8,9 @@ class Empanada {
 	}
 }
 
-fetch("../db/gustos.json")
+fetch(
+	"https://raw.githubusercontent.com/NicolasKowal/EmpanadasYa/main/db/gustos.json"
+)
 	.then((response) => response.json())
 	.then((datos) => {
 		try {
