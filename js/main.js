@@ -11,18 +11,18 @@ class Empanada {
 fetch(
 	"https://raw.githubusercontent.com/NicolasKowal/EmpanadasYa/main/db/gustos.json"
 )
-	.then((response) => {
-		if (!response.ok) {
-			throw new Error(`HTTP error! status: ${response.status}`);
-		}
-		return response.json();
-	})
+	.then((response) => response.json())
 	.then((datos) => {
-		console.log("Datos cargados correctamente:", datos);
-		saboresDeEmpanadas = datos; // Asumo que aquí asignas los datos a la variable
+		try {
+			datos.forEach((element) => {
+				saboresDeEmpanadas.push(element);
+			});
+		} catch (error) {
+			console.error("Error cargando los datos", error);
+		}
 	})
 	.catch((error) => {
-		console.error("Error en el fetch:", error);
+		console.error("Error al levantar el archivo", error);
 	});
 
 function Cookies() {
@@ -35,27 +35,20 @@ setTimeout(Cookies, 1500);
 
 function MostrarLaHora() {
 	const time = document.querySelector("#time");
-	if (!time) {
-		console.error("El elemento con id 'time' no se encuentra en el DOM.");
-		return;
-	}
-
 	let laHora = document.createElement("p");
 	laHora.classList.add("col-6");
 	let laHoraDeEntrega = document.createElement("p");
 	laHoraDeEntrega.classList.add("col-6");
 	time.appendChild(laHora);
 	time.appendChild(laHoraDeEntrega);
-
 	const opciones = { hour: "2-digit", minute: "2-digit", hour12: false };
 	const Actualizar = () => {
 		const ahora = new Date();
 		const en30 = new Date(ahora.getTime() + 30 * 60000);
-		laHora.textContent =
-			"Hora actual: " + ahora.toLocaleTimeString(undefined, opciones);
-		laHoraDeEntrega.textContent =
-			"Hora aproximada de entrega: " +
-			en30.toLocaleTimeString(undefined, opciones);
+		const horaYMinutos = ahora.toLocaleTimeString(undefined, opciones);
+		laHora.textContent = "Hora actual: " + horaYMinutos;
+		const horaEntrega = en30.toLocaleTimeString(undefined, opciones);
+		laHoraDeEntrega.textContent = "Hora aproximada de entrega: " + horaEntrega;
 	};
 	setInterval(Actualizar, 1000);
 }
@@ -83,12 +76,6 @@ function Empanadas() {
 	let mostrarPedido = document.querySelector("#pedido");
 	let boton = document.querySelector("#next");
 	let parrafo = document.querySelector("#total");
-
-	if (!parrafo) {
-		console.error("El elemento con id 'total' no se encuentra en el DOM.");
-		return;
-	}
-
 	cantidadGuardada = 1500 * cantidadGuardada;
 	parrafo.textContent = "$ " + cantidadGuardada;
 	boton.disabled = cantidadGuardada === 0;
@@ -97,7 +84,6 @@ function Empanadas() {
 		const listaJSON = JSON.stringify(array);
 		localStorage.setItem(nombre, listaJSON);
 	};
-
 	function GenerarListaPedida(lista, div) {
 		div.innerHTML = "";
 		lista.forEach((element) => {
@@ -114,7 +100,6 @@ function Empanadas() {
 			div.appendChild(nuevoLI);
 		});
 	}
-
 	function GenerarLista(lista, div) {
 		div.innerHTML = "";
 		lista.forEach((element) => {
@@ -206,7 +191,6 @@ function Empanadas() {
 			});
 		});
 	}
-
 	function Botonera() {
 		let botonVegeta = document.querySelector("#botonVegeta");
 		let botonVegana = document.querySelector("#botonVegana");
@@ -217,7 +201,6 @@ function Empanadas() {
 			);
 			GenerarLista(empanadaFiltro, Gustos);
 		});
-
 		botonVegana.addEventListener("click", () => {
 			let empanadaFiltro = saboresDeEmpanadas.filter(
 				(empanada) => empanada.tipo == "veganas"
