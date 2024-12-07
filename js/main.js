@@ -11,18 +11,17 @@ class Empanada {
 fetch(
 	"https://raw.githubusercontent.com/NicolasKowal/EmpanadasYa/main/db/gustos.json"
 )
-	.then((response) => response.json())
-	.then((datos) => {
-		try {
-			datos.forEach((element) => {
-				saboresDeEmpanadas.push(element);
-			});
-		} catch (error) {
-			console.error("Error cargando los datos", error);
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
 		}
+		return response.json();
+	})
+	.then((datos) => {
+		console.log("Datos cargados correctamente:", datos);
 	})
 	.catch((error) => {
-		console.error("Error al levantar el archivo", error);
+		console.error("Error en el fetch:", error);
 	});
 
 function Cookies() {
