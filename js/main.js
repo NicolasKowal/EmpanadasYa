@@ -19,6 +19,8 @@ fetch(
 	})
 	.then((datos) => {
 		console.log("Datos cargados correctamente:", datos);
+		saboresDeEmpanadas = datos;
+		GenerarLista(saboresDeEmpanadas, Gustos);
 	})
 	.catch((error) => {
 		console.error("Error en el fetch:", error);
