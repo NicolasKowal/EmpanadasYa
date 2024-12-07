@@ -35,20 +35,26 @@ setTimeout(Cookies, 1500);
 
 function MostrarLaHora() {
 	const time = document.querySelector("#time");
+	if (!time) {
+		console.error("El elemento con id 'time' no se encuentra en el DOM.");
+		return;
+	}
 	let laHora = document.createElement("p");
 	laHora.classList.add("col-6");
 	let laHoraDeEntrega = document.createElement("p");
 	laHoraDeEntrega.classList.add("col-6");
 	time.appendChild(laHora);
 	time.appendChild(laHoraDeEntrega);
+
 	const opciones = { hour: "2-digit", minute: "2-digit", hour12: false };
 	const Actualizar = () => {
 		const ahora = new Date();
 		const en30 = new Date(ahora.getTime() + 30 * 60000);
-		const horaYMinutos = ahora.toLocaleTimeString(undefined, opciones);
-		laHora.textContent = "Hora actual: " + horaYMinutos;
-		const horaEntrega = en30.toLocaleTimeString(undefined, opciones);
-		laHoraDeEntrega.textContent = "Hora aproximada de entrega: " + horaEntrega;
+		laHora.textContent =
+			"Hora actual: " + ahora.toLocaleTimeString(undefined, opciones);
+		laHoraDeEntrega.textContent =
+			"Hora aproximada de entrega: " +
+			en30.toLocaleTimeString(undefined, opciones);
 	};
 	setInterval(Actualizar, 1000);
 }
