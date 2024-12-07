@@ -19,8 +19,7 @@ fetch(
 	})
 	.then((datos) => {
 		console.log("Datos cargados correctamente:", datos);
-		saboresDeEmpanadas = datos;
-		GenerarLista(saboresDeEmpanadas, Gustos);
+		saboresDeEmpanadas = datos; // Asumo que aquí asignas los datos a la variable
 	})
 	.catch((error) => {
 		console.error("Error en el fetch:", error);
@@ -40,6 +39,7 @@ function MostrarLaHora() {
 		console.error("El elemento con id 'time' no se encuentra en el DOM.");
 		return;
 	}
+
 	let laHora = document.createElement("p");
 	laHora.classList.add("col-6");
 	let laHoraDeEntrega = document.createElement("p");
@@ -59,6 +59,7 @@ function MostrarLaHora() {
 	};
 	setInterval(Actualizar, 1000);
 }
+MostrarLaHora();
 
 function Empanadas() {
 	const precioEmpanada = 1500;
@@ -82,6 +83,12 @@ function Empanadas() {
 	let mostrarPedido = document.querySelector("#pedido");
 	let boton = document.querySelector("#next");
 	let parrafo = document.querySelector("#total");
+
+	if (!parrafo) {
+		console.error("El elemento con id 'total' no se encuentra en el DOM.");
+		return;
+	}
+
 	cantidadGuardada = 1500 * cantidadGuardada;
 	parrafo.textContent = "$ " + cantidadGuardada;
 	boton.disabled = cantidadGuardada === 0;
@@ -90,6 +97,7 @@ function Empanadas() {
 		const listaJSON = JSON.stringify(array);
 		localStorage.setItem(nombre, listaJSON);
 	};
+
 	function GenerarListaPedida(lista, div) {
 		div.innerHTML = "";
 		lista.forEach((element) => {
@@ -106,6 +114,7 @@ function Empanadas() {
 			div.appendChild(nuevoLI);
 		});
 	}
+
 	function GenerarLista(lista, div) {
 		div.innerHTML = "";
 		lista.forEach((element) => {
@@ -197,6 +206,7 @@ function Empanadas() {
 			});
 		});
 	}
+
 	function Botonera() {
 		let botonVegeta = document.querySelector("#botonVegeta");
 		let botonVegana = document.querySelector("#botonVegana");
@@ -207,6 +217,7 @@ function Empanadas() {
 			);
 			GenerarLista(empanadaFiltro, Gustos);
 		});
+
 		botonVegana.addEventListener("click", () => {
 			let empanadaFiltro = saboresDeEmpanadas.filter(
 				(empanada) => empanada.tipo == "veganas"
